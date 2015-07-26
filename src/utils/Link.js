@@ -1,0 +1,42 @@
+/*
+ * StringerBell
+ * Copyright (c) Alessandro Molari (@alem0lars).
+ *
+ * This source code is licensed under the Apache Version 2.0 license found in
+ * the LICENSE.txt file in the root directory of this source tree.
+ */
+
+
+// {{{ Imports.
+
+import invariant from 'react/lib/invariant';
+import AppActions from '../actions/AppActions';
+
+// }}}
+
+
+function handleClick(event) {
+
+  // If not left mouse click
+  if (event.button !== 0) {
+    return;
+  }
+
+  // If modified event
+  if (event.metaKey || event.altKey || event.ctrlKey || event.shiftKey) {
+    return;
+  }
+
+  var el = event.currentTarget;
+
+  invariant(el && el.nodeName === 'A', 'The target element must be a link.');
+
+  // Rebuild path
+  var path = el.pathname + el.search + (el.hash || '');
+
+  event.preventDefault();
+  AppActions.navigateTo(path);
+}
+
+
+export default { handleClick };

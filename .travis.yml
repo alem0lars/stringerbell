@@ -1,0 +1,16 @@
+# StringerBell
+# Copyright (c) Alessandro Molari (@alem0lars).
+#
+# This source code is licensed under the Apache Version 2.0 license found in
+# the LICENSE.txt file in the root directory of this source tree.
+
+
+language: node_js
+node_js:
+  - iojs
+  - '0.12'
+  - '0.10'
+matrix:
+  allow_failures:
+    - node_js: iojs
+    - node_js: '0.12'

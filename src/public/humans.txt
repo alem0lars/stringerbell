@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Alessandro Molari -- Developer -- @alem0lars
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JavaScript
+    React, Flux, SuperAgent
